@@ -11,6 +11,12 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "paths": {
+      "ngx-depend-dropdown": [
+        "dist/ngx-depend-dropdown/ngx-depend-dropdown",
+        "dist/ngx-depend-dropdown"
+      ]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
