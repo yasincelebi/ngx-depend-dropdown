@@ -11,7 +11,7 @@ import {DropdownConfig, DropdownData} from "../../../ngx-depend-dropdown/src/typ
 })
 export class AppComponent implements OnInit {
   title = 'example';
-  opt: DropdownData = [];
+  data: DropdownData = [];
   dropdownConfig: DropdownConfig = {}
 
   constructor(private http: HttpClient, private dropdownService: NgxDependDropdownService) {
@@ -21,13 +21,13 @@ export class AppComponent implements OnInit {
     this.setData();
     this.dropdownConfig = {
       unavailableType: 'disabled',
-      containerClass: ['selam', 'qwe'],
-      nodeClass: ['qwe'],
+      containerClass: ['container', 'row'],
+      nodeClass: ['some-class'],
     }
   }
 
   setData() {
-    this.opt = [
+    this.data = [
       {
         name: 'opt1',
         visibility: () => {
