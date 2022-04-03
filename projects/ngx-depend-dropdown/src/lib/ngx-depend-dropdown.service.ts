@@ -35,7 +35,7 @@ export class NgxDependDropdownService {
 
 
 
-  getNode(node: any) {
+  getNode(node: string) {
     return this._data.find((e: any) => e.name === node);
   }
 
