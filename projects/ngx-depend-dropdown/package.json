@@ -1,6 +1,29 @@
 {
   "name": "ngx-depend-dropdown",
-  "version": "0.0.1",
+  "author": {
+    "name": "Yasin Çelebi"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "contributors": [
+    {
+      "name": "Yasin Çelebi"
+    },
+    {
+      "name": "Recep Hıdır"
+    }
+  ],
+  "description": "Angular library for dependency dropdown",
+  "keywords": [
+    "angular",
+    "dependency",
+    "dropdown",
+    "ngx"
+  ],
+  "license": "MIT",
+
+  "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^13.1.0",
     "@angular/core": "^13.1.0"
