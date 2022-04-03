@@ -7,12 +7,7 @@ Table of contents
 * [Features](#features)
 * [Getting started](#getting-started)
 * [API](#api)
-* [Change detection](#change-detection)
-* [Custom styles](#custom-styles)
-* [Validation state](#validation-state)
-* [Contributing](#contributing)
-* [Development](#development)
-* [Inspiration](#inspiration)
+
 
 
 ## Features
