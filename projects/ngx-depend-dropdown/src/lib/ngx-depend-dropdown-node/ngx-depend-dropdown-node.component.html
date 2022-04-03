@@ -1,0 +1,20 @@
+<select
+  [class.disabled]="disabled"
+  [ngClass]="nodeClass"
+  class="depend-dropdown-node-select"
+  #selectBox
+  [name]="data.name"
+  [(ngModel)]="data.selectedValue"
+  (change)="onChange($event, data)"
+  [hidden]="!data.visibilityValue && visibilityType === 'invisible'"
+
+>
+
+  <option class="depend-dropdown-node-option depend-dropdown-placeholder" selected
+          [ngValue]="null">{{data.placeholder}}</option>
+  <option [ngClass]="{selected: data.selectedValue == child}" class="depend-dropdown-node-option"
+          *ngFor="let child of data.values" [ngValue]="child">
+    {{ child?.name }}
+  </option>
+</select>
+
