@@ -1,0 +1,10 @@
+<div class="depend-dropdown-container" [ngClass]="config.containerClass || ''">
+<ng-container *ngFor="let node of data">
+  <lib-ngx-depend-dropdown-node
+    #dropdown
+    (selectEvent)="select($event)"
+    [data]="node"
+  ></lib-ngx-depend-dropdown-node>
+</ng-container>
+</div>
+
