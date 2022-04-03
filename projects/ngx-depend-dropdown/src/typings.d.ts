@@ -9,6 +9,7 @@ export interface DropdownNode {
   dependent?: string | string[],
   visibilityValue?: boolean,
   placeholder?: string,
+  label?: string,
 }
 
 export type DropdownData = DropdownNode[]
@@ -16,7 +17,8 @@ export type DropdownData = DropdownNode[]
 export interface DropdownConfig {
   unavailableType?: UnavailableDropdownType
   containerClass?: string | string[]
-  nodeClass?: string | string[]
+  nodeClass?: string | string[],
+
 
 }
 export type UnavailableDropdownType = 'disabled'  | 'invisible'
