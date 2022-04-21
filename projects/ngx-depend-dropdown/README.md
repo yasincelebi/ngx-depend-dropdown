@@ -16,10 +16,10 @@ Table of contents
 - [x] Output change event
 - [x] HTML5 elements
 - [x] Observable change detection and values
-- [ ] Custom validation state
-- [ ] Custom validation state with custom messages
-- [ ] Accessibility
-- [ ] Multiselect
+- [x] Required validation state
+- [x] Required validation state with custom messages
+- [x] Accessibility
+- [x] Multiselect
 - [ ] Mat-Select Support
 
 ## Warning
