@@ -58,7 +58,7 @@ export class AppComponent implements OnInit {
         visibility: () => {
           return !!this.dropdownService.getNodeValue('opt1');
         },
-        selectedValue: 1,
+        selectedValue: null,
         values: [],
         dependent: 'opt1',
         setValues: () => {
@@ -82,16 +82,18 @@ export class AppComponent implements OnInit {
       {
         name: 'opt3',
         visibility: () => {
-
           return !!this.dropdownService.getNodeValue('opt2');
         },
-        selectedValue: 1,
+        selectedValue: null,
         values: [],
 
-        dependent: 'opt1',
+        dependent: 'opt2',
         setValues: () => {
           return [{name: 'yasin', id: 1}];
         },
+        label: 'selam',
+        required: true,
+        errorMessage: 'error message',
       },
       {
         name: 'opt3',
@@ -99,7 +101,7 @@ export class AppComponent implements OnInit {
 
           return true;
         },
-        selectedValue: 1,
+        selectedValue: null,
         values: [],
 
 
