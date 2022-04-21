@@ -10,6 +10,9 @@ export interface DropdownNode {
   visibilityValue?: boolean,
   placeholder?: string,
   label?: string,
+  required?: string | boolean,
+  errorMessage?: string,
+  isMultiple?: boolean,
 }
 
 export type DropdownData = DropdownNode[]

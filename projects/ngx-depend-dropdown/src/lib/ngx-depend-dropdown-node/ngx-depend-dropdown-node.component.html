@@ -1,15 +1,19 @@
 
-<label class="ngx-depend-dropdown-label">{{data.label}}</label>
+<div>
+  <label class="ngx-depend-dropdown-label" [for]="data.name">{{data.label}}</label>
+</div>
 <select
-  [class.disabled]="disabled"
+  [class.disabled]="!data.visibilityValue && disabled"
   [ngClass]="nodeClass"
   class="depend-dropdown-node-select"
+  [required]="data.required || false"
   #selectBox
+  [id]="data.name"
   [name]="data.name"
   [(ngModel)]="data.selectedValue"
   (change)="onChange($event, data)"
   [hidden]="!data.visibilityValue && visibilityType === 'invisible'"
-
+  [multiple]="data.isMultiple"
 >
 
   <option class="depend-dropdown-node-option depend-dropdown-placeholder" selected
@@ -19,4 +23,11 @@
     {{ child?.name }}
   </option>
 </select>
+
+
+<!--error message if required-->
+<div *ngIf="data.required && !data.selectedValue && data.errorMessage" class="depend-dropdown-node-error-message">
+  {{data.errorMessage}}
+</div>
+
 

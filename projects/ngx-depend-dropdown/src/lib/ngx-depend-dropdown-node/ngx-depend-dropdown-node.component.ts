@@ -12,6 +12,7 @@ import {BehaviorSubject, Observable, of} from "rxjs";
 import {NgxDependDropdownService} from "../ngx-depend-dropdown.service";
 import {DropdownNode} from "../../typings";
 
+
 @Component({
   selector: 'lib-ngx-depend-dropdown-node',
   templateUrl: './ngx-depend-dropdown-node.component.html',
@@ -24,10 +25,11 @@ export class NgxDependDropdownNodeComponent implements OnInit, AfterViewInit {
   @Input() data!: DropdownNode;
 
   @Output() selectEvent = new EventEmitter<any>();
-  // @ts-ignore
-  unavailableType: BehaviorSubject<any> = new BehaviorSubject();
+
+  unavailableType: BehaviorSubject<any> = new BehaviorSubject(null);
   visibilityType: string = '';
   disabled: BehaviorSubject<any> = new BehaviorSubject(false);
+  //@ts-ignore
   @ViewChild('selectBox') selectBox: any;
 
   constructor(private dropdownService: NgxDependDropdownService, private cdr: ChangeDetectorRef) {
@@ -46,6 +48,7 @@ export class NgxDependDropdownNodeComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.cdr.detectChanges();
     this.unavailableType.subscribe((value: boolean) => {
+
       this.selectBox.nativeElement.disabled = value;
       this.disabled.next(this.selectBox.disabled)
     });
@@ -58,30 +61,14 @@ export class NgxDependDropdownNodeComponent implements OnInit, AfterViewInit {
     return array
   }
 
-  setValue() {
-    let val = this.data.setValues();
 
-    let observableArray = this.arrayToObservable(val)
-
-    observableArray.subscribe((values: any) => {
-      values.find((item: any) => {
-        if (item.id === this.data.selectedValue) {
-          this.data.selectedValue = item
-        }
-      })
-      this.data.values = values;
-    })
-  }
 
   onChange($event: Event, data: DropdownNode) {
     this.selectEvent.emit({$event, data});
-
   }
 
   getVisibilityType(): void {
-
     this.visibilityType = this.dropdownService.dropdownConfig?.unavailableType
-
   }
 
 }
