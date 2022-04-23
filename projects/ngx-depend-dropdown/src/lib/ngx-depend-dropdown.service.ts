@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
-import {DropdownData} from "../typings";
-
+import { DropdownData } from 'NgxDependDropdown';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class NgxDependDropdownService {
   set data(options: any) {
@@ -11,7 +10,7 @@ export class NgxDependDropdownService {
   }
 
   get data(): any {
-    return this._data
+    return this._data;
   }
 
   set dropdownConfig(config: any) {
@@ -26,14 +25,7 @@ export class NgxDependDropdownService {
 
   private _data: DropdownData = [];
 
-
-  constructor() {
-
-  }
-
-
-
-
+  constructor() {}
 
   getNode(node: string) {
     return this._data.find((e: any) => e.name === node);
@@ -42,6 +34,4 @@ export class NgxDependDropdownService {
   getNodeValue(node: any) {
     return this.getNode(node)?.selectedValue;
   }
-
-
 }
