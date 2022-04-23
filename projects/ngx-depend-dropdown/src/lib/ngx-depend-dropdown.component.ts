@@ -9,11 +9,7 @@ import {
 } from '@angular/core';
 import { NgxDependDropdownService } from './ngx-depend-dropdown.service';
 import { Observable, of } from 'rxjs';
-import {
-  DropdownConfig,
-  DropdownData,
-  DropdownNode,
-} from '../types/ngx-depend-dropdown';
+import { DropdownConfig, DropdownData, DropdownNode } from 'NgxDependDropdown';
 
 @Component({
   selector: 'ngx-depend-dropdown',
