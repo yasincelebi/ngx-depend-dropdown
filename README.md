@@ -145,7 +145,7 @@ Contributions are welcome. Feel free to open an issue or create a pull request.
 ### Run demo page in watch mode
 ```
 git clone https://github.com/yasincelebi/ngx-depend-dropdown
-cd ng-select
+cd ngx-depend-dropdown
 npm install
 ng build ngx-depend-dropdown
 ng serve example --open
